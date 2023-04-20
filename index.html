@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Add the Tailwind CSS CDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+        />
+        <title>Namma Yatri</title>
+        <style>
+            /* Set the height of the body and html to 100% */
+            body,
+            html {
+                height: 100%;
+            }
+        </style>
+        <!-- Add the Dialogflow Messenger bot script -->
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+    </head>
+    <body class="bg-gray-100 flex flex-col min-h-screen">
+        <header class="bg-blue-600 text-white py-4">
+            <div class="container mx-auto flex justify-center">
+                <h1 class="text-2xl font-bold">Namma Yatri</h1>
+            </div>
+        </header>
+
+        <div
+            class="container mx-auto flex-grow flex items-center justify-center"
+        >
+            <!-- Add the Dialogflow Messenger bot -->
+            <df-messenger
+                df-cx="true"
+                location="us-central1"
+                chat-title="Automate"
+                agent-id="6d126e62-5a5a-47f9-8721-5bf24dd79b43"
+                language-code="en"
+            ></df-messenger>
+        </div>
+
+        <footer class="bg-blue-600 text-white text-center py-2 mt-auto">
+            <div class="container mx-auto">
+                <p class="text-sm">
+                    &copy; 2023 Namma Yatri. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+        <!-- Add the custom script to make the footer stick to the bottom -->
+        <script>
+            function setFooterPosition() {
+                const footer = document.querySelector("footer");
+                const body = document.querySelector("body");
+                const html = document.querySelector("html");
+                if (
+                    footer.offsetTop + footer.offsetHeight <
+                    window.innerHeight
+                ) {
+                    body.style.height = "100%";
+                    html.style.height = "100%";
+                    footer.style.position = "fixed";
+                    footer.style.bottom = "0";
+                }
+            }
+            window.addEventListener("load", setFooterPosition);
+            window.addEventListener("resize", setFooterPosition);
+        </script>
+    </body>
+</html>
