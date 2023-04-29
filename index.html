@@ -4,67 +4,100 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Add the Tailwind CSS CDN -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-        />
+
         <title>Namma Yatri</title>
-        <style>
-            /* Set the height of the body and html to 100% */
-            body,
-            html {
-                height: 100%;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="./styles/index.css" />
         <!-- Add the Dialogflow Messenger bot script -->
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
     </head>
-    <body class="bg-gray-100 flex flex-col min-h-screen">
-        <header class="bg-blue-600 text-white py-4">
-            <div class="container mx-auto flex justify-center">
-                <h1 class="text-2xl font-bold">Namma Yatri</h1>
+    <body>
+        <div class="page page-1">
+            <header>
+                <img src="/assets/namma-yatri.png" class="header-image" />
+            </header>
+            <div class="main-container">
+                <div class="left-container">
+                    <span class="main-header-1">Book an auto,</span><br />
+                    <span class="main-header-2">without the app.</span>
+                    <hr class="ruler-1" />
+                    <div class="sub-header-1">
+                        Find affordable, safe rides in just a few clicks.
+                    </div>
+                </div>
+                <div class="right-container">
+                    <img
+                        src="./assets/landingpage-image.png"
+                        class="landingpage-image"
+                    />
+                </div>
             </div>
-        </header>
+            <button class="cta-button">Book Now</button>
+        </div>
 
-        <div
-            class="container mx-auto flex-grow flex items-center justify-center"
-        >
+        <div class="page page-2">
+            <div class="main-container">
+                <div class="left-container">
+                    <span class="main-header-1 main-header-second-page"
+                        >Go from Metro to</span
+                    ><br />
+                    <span class="main-header-1 main-header-second-page"
+                        >your doorstep,</span
+                    ><br />
+
+                    <span class="main-header-1 main-header-second-page"
+                        >seamlessly</span
+                    >
+                    <hr class="ruler-1" />
+                    <div class="sub-header-2">
+                        The perfect last-mile connectivity doesn't exist.
+                    </div>
+                </div>
+                <div class="right-container">
+                    <img
+                        src="./assets/landingpage-image.png"
+                        class="landingpage-image"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="page page-3">
+            <div class="main-container">
+                <div class="left-container">
+                    <span class="main-header-1">Dina-dinda ratri,</span><br />
+                    <span class="main-header-2">there's always </span><br />
+                    <span class="main-header-2">Namma Yatri!</span>
+                    <hr class="ruler-1" />
+                    <div class="sub-header-1">
+                        24/7 rides for Bengaluru's hustle and bustle
+                    </div>
+                </div>
+                <div class="right-container">
+                    <img
+                        src="./assets/landingpage-image.png"
+                        class="landingpage-image"
+                    />
+                </div>
+            </div>
+            <button class="cta-button">Book Now</button>
+
+            <div class="footer"></div>
+        </div>
+        <div>
             <!-- Add the Dialogflow Messenger bot -->
             <df-messenger
                 df-cx="true"
                 location="us-central1"
-                chat-title="Automate"
+                chat-title="Say Hi to start booking!"
                 agent-id="6d126e62-5a5a-47f9-8721-5bf24dd79b43"
                 language-code="en"
             ></df-messenger>
         </div>
-
-        <footer class="bg-blue-600 text-white text-center py-2 mt-auto">
-            <div class="container mx-auto">
-                <p class="text-sm">
-                    &copy; 2023 Namma Yatri. All rights reserved.
-                </p>
-            </div>
+        <footer class="footer">
+            <hr class="fading-ruler" />
+            <br />
+            <span class="footer-text">© Juspay 2023 • All rights reserved</span>
         </footer>
-
         <!-- Add the custom script to make the footer stick to the bottom -->
-        <script>
-            function setFooterPosition() {
-                const footer = document.querySelector("footer");
-                const body = document.querySelector("body");
-                const html = document.querySelector("html");
-                if (
-                    footer.offsetTop + footer.offsetHeight <
-                    window.innerHeight
-                ) {
-                    body.style.height = "100%";
-                    html.style.height = "100%";
-                    footer.style.position = "fixed";
-                    footer.style.bottom = "0";
-                }
-            }
-            window.addEventListener("load", setFooterPosition);
-            window.addEventListener("resize", setFooterPosition);
-        </script>
+        <script src="./index.js"></script>
     </body>
 </html>
