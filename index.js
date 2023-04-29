@@ -1,3 +1,21 @@
+// Get the <df-messenger> element
+const dfMessenger = document.querySelector('df-messenger');
+
+// Add event listener for 'keydown'
+document.addEventListener('keydown', (event) => {
+  // Check if the 'Esc' key was pressed
+  if (event.key === 'Escape' || event.keyCode === 27) {
+    // Remove the 'expand' attribute
+    dfMessenger.removeAttribute('expand');
+  }
+});
+
+function openBot(){
+    console.log('Button Clicked');
+    const dfMessenger = document.querySelector('df-messenger');
+    dfMessenger.setAttribute('expand', 'true');
+}
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
