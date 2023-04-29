@@ -6,7 +6,7 @@ body {
     width: 100%;
 }
 .page-1 {
-    height: 75vh;
+    height: 100vh;
     background-color: #2c2f3a !important;
 }
 .page-2 {
@@ -100,7 +100,7 @@ footer{
     background-color: #2c2f3a !important;
 }
 .footer-text {
-    padding-left: 5rem !important;
+    margin:auto; display:table;
     font-family: sans-serif;
     color: #ffffff;
     font-family: 1.5rem;
@@ -147,4 +147,20 @@ footer{
     border-radius: 5%;
     width: 227.4px;
     height: 58.5px;
+}
+.cta-button-2 {    
+    font-family: sans-serif;
+    background-color: #ffb738;
+    color: black;
+    font-size: 1.2rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    border-radius: 5%;
+    width: 227.4px;
+    height: 58.5px;
+    margin-top: 2rem;
 }

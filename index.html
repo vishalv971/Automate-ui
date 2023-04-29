@@ -45,12 +45,17 @@
                     ><br />
 
                     <span class="main-header-1 main-header-second-page"
-                        >seamlessly</span
+                        >seamlessly.</span
                     >
                     <hr class="ruler-1" />
-                    <div class="sub-header-2">
-                        The perfect last-mile connectivity doesn't exist.
-                    </div>
+                    <span class="sub-header-2">
+                        The perfect last-mile connectivity 
+                    </span><br />
+                    <span class="sub-header-2">
+                        <s>doesn't exist.</s>
+                    </span>
+                    <br>
+                    <button class="cta-button-2" onclick="openBot()">Request a Ride</button>
                 </div>
                 <div class="right-container">
                     <video width="323" height="517.1" controls autoplay muted loop>
@@ -60,7 +65,7 @@
                     </video>
                 </div>
             </div>
-            <button class="cta-button" onclick="openBot()">Request a Ride</button>
+            
         </div>
         <div class="page page-3">
             <div class="main-container">
@@ -72,6 +77,8 @@
                     <div class="sub-header-1">
                         24/7 rides for Bengaluru's hustle and bustle
                     </div>
+                    <br />
+                    <button class="cta-button-2" onclick="openBot()">Ride Now</button>
                 </div>
                 <div class="right-container">
                     <video width="323" height="517.1" controls autoplay muted loop>
@@ -80,9 +87,13 @@
                     </video>
                 </div>
             </div>
-            <button class="cta-button" onclick="openBot()">Ride Now</button>
-
-            <div class="footer"></div>
+            
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <footer class="footer">
+                <hr class="fading-ruler" />
+                <span class="footer-text">© Juspay 2023 • All rights reserved • Pratik Shanbhag • Sarang Ravindra • Vishal Vishwanathan </span>
+                <br />
+            </footer>
         </div>
         <div>
             <!-- Add the Dialogflow Messenger bot -->
@@ -94,11 +105,8 @@
                 language-code="en"
             ></df-messenger>
         </div>
-        <footer class="footer">
-            <hr class="fading-ruler" />
-            <br />
-            <span class="footer-text">© Juspay 2023 • All rights reserved</span>
-        </footer>
+        
+        
         <!-- Add the custom script to make the footer stick to the bottom -->
         <script src="./index.js"></script>
     </body>
